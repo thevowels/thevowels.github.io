@@ -2,21 +2,10 @@ import React from 'react';
 import {
   ChakraProvider,
   Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
   theme,
   Center,
-  Flex,
   Image,
-  Badge,
-  Button,
 } from '@chakra-ui/react';
-import {MdStar} from 'react-icons/all';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
 
 function App() {
   return (
