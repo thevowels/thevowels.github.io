@@ -66,11 +66,7 @@ function App() {
   const clickHandler= ()=>{
     setCount(count + 1);
     if(count > 12){
-      let v = getCurrentGif(imageArr)
-      console.log('v ', v, typeof(v))
-      console.log('images ', imageArr)
-      console.log(getCurrentGif)
-      setGif(v)
+      setGif(getCurrentGif(imageArr))
       onOpen()
     }
   }
