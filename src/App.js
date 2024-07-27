@@ -48,7 +48,7 @@ function App() {
               <ModalBody
                 bg='#ebbe7e30'
               >
-                <Image src={gif}/>
+                <Image src={gif} onClick={clickHandler}/>
               </ModalBody>
             </ModalContent>
           </Modal>
