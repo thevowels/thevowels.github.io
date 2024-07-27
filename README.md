@@ -1,1 +1,10 @@
-<meta http-equiv="Refresh" content="2; url=public/index.html">
+# My Profile
+
+## Languages
+    * TypeScript
+    * JavaScript
+
+## Libraries
+
+    React
+    Chakara UI

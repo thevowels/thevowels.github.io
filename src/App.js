@@ -1,14 +1,20 @@
 import React from 'react';
 import {
   ChakraProvider,
-  Box,
   theme,
   Center,
   Image,
-  Stack,
-  Text,
-  Button, Heading,
-  Flex, useBreakpointValue
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  Lorem,
+  Button,
+  useDisclosure,
+
 } from '@chakra-ui/react';
 import Abcd from './Abcd';
 import ResponsiveLayout from './ResponsiveLayout';
@@ -17,11 +23,14 @@ function App() {
 
   const [count, setCount] = React.useState(0);
   const [show, setShow] = React.useState(false);
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
   const clickHandler= ()=>{
     console.log('clicked')
-    setCount(count+1);
-    if(count > 5){
-      setShow(true);
+    if(count > 12){
+      onOpen()
+    }else{
+      setCount(count+1);
     }
   }
 
@@ -30,6 +39,20 @@ function App() {
       <div id={"whole"}>
         <div id="heading">
           <ResponsiveLayout btnClickHandler={clickHandler}/>
+          <Modal  onClose={onClose} isOpen={isOpen} isCentered>
+            <ModalOverlay
+              bg='#ebbe7e30'
+              backdropFilter='blur(10px)'
+            />
+            <ModalContent>
+              <ModalBody
+                bg='#ebbe7e30'
+              >
+                <Image src={require('./puuung.gif')}/>
+              </ModalBody>
+            </ModalContent>
+          </Modal>
+
         </div>
         <div id={"body"} style={{ height:'50vh'}}>
         {show ?

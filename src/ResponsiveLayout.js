@@ -59,6 +59,7 @@ function ResponsiveLayout({ btnClickHandler }) {
                  objectFit='cover'
                  borderRadius='full'
                  display="flex"
+                 onClick={()=>btnClickHandler()}
 
 
           />
