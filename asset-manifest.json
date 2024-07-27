@@ -1,15 +1,24 @@
 {
   "files": {
-    "main.js": "/static/js/main.2862e114.js",
+    "main.js": "/static/js/main.8b29509c.js",
     "static/js/453.537b950a.chunk.js": "/static/js/453.537b950a.chunk.js",
+    "static/media/4_2.gif": "/static/media/4_2.bacf788f41582b40f1f3.gif",
+    "static/media/3_3.gif": "/static/media/3_3.e2b6eff5801c6983aa6f.gif",
+    "static/media/3_2.gif": "/static/media/3_2.861b0aec12f7c8c3f282.gif",
+    "static/media/2_3.gif": "/static/media/2_3.24db7d9c729100635277.gif",
+    "static/media/3_1.gif": "/static/media/3_1.a97e11e1592ade28356e.gif",
     "static/media/puuung.gif": "/static/media/puuung.8dc42d26f470324b3766.gif",
     "static/media/cuddle.gif": "/static/media/cuddle.b5c99210c2847eab5e8d.gif",
     "static/media/profile.png": "/static/media/profile.38559576c4cd11c37b67.png",
+    "static/media/4_1.gif": "/static/media/4_1.4afcf470a17ff05eff21.gif",
+    "static/media/cuddling.webp": "/static/media/cuddling.89dcacd34703f7c1daee.webp",
+    "static/media/2_1.gif": "/static/media/2_1.9feb89c25601c152cdab.gif",
+    "static/media/2_2.gif": "/static/media/2_2.ee67411653bf7928bc51.gif",
     "index.html": "/index.html",
-    "main.2862e114.js.map": "/static/js/main.2862e114.js.map",
+    "main.8b29509c.js.map": "/static/js/main.8b29509c.js.map",
     "453.537b950a.chunk.js.map": "/static/js/453.537b950a.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.2862e114.js"
+    "static/js/main.8b29509c.js"
   ]
 }
