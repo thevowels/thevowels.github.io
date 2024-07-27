@@ -4,7 +4,6 @@ import { Box, Flex, Heading, Image, Stack, Text, useBreakpointValue } from '@cha
 function ResponsiveLayout({ btnClickHandler }) {
   // Determine the layout based on screen size
   const isMobile = useBreakpointValue({ base: true, md: false });
-  console.log(btnClickHandler);
   return (
     <Box p={5}>
       {isMobile ? (

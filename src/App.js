@@ -23,14 +23,14 @@ function App() {
 
   const [count, setCount] = React.useState(0);
   const [show, setShow] = React.useState(false);
+  const [gif, setGif] = React.useState(require('./puuung.gif'));
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   const clickHandler= ()=>{
-    console.log('clicked')
+    setCount(count + 1);
     if(count > 12){
+      count % 2 == 0 ? setGif(require('./puuung.gif')): setGif(require('./cuddle.gif'))
       onOpen()
-    }else{
-      setCount(count+1);
     }
   }
 
@@ -48,7 +48,7 @@ function App() {
               <ModalBody
                 bg='#ebbe7e30'
               >
-                <Image src={require('./puuung.gif')}/>
+                <Image src={gif}/>
               </ModalBody>
             </ModalContent>
           </Modal>
