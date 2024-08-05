@@ -9,6 +9,7 @@ import {
   ModalBody,
   useDisclosure,
   Flex,
+  Box,
 } from '@chakra-ui/react';
 import Abcd from './Abcd';
 import ResponsiveLayout from './ResponsiveLayout';
@@ -54,7 +55,7 @@ function App() {
         return
       case hourIntervals.evening_to_midnight.includes(hour):
         // return 'evening_to_midnight';
-        imageArr = [require('./gifs/puuung.gif'), require('./gifs/cuddle.gif'), require('./gifs/cuddling.webp')]
+        imageArr = [require('./gifs/puuung.gif'), require('./gifs/cuddle.gif'), require('./gifs/cuddling.webp'), require('./mp4/eve.mp4')]
         return
       default:
       // return 'unknown_interval';
@@ -86,7 +87,21 @@ function App() {
                 bg='#ebbe7e30'
               >
                 <Flex justify="center" align="center" height="100%">
-                <Image src={gif} onClick={clickHandler}/>
+                  { gif.endsWith('.mp4') ?
+                    <Box
+                      as="video"
+                      src={gif}
+                      autoPlay
+                      loop
+                      width="100%"
+                      height="auto"
+                      objectFit="cover"
+                      onClick={clickHandler}
+                    />
+                    :
+                    <Image src={gif} onClick={clickHandler}/>
+
+                  }
                 </Flex>
               </ModalBody>
             </ModalContent>
