@@ -1,4 +1,6 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+
 import {
   ChakraProvider,
   theme,
@@ -11,9 +13,15 @@ import {
   Flex,
   Box,
 } from '@chakra-ui/react';
-import Abcd from './Abcd';
+
 import ResponsiveLayout from './ResponsiveLayout';
 import { getCurrentGif } from './gifFunction';
+
+
+
+import Abcd from './Abcd';
+import Home from './Home';
+
 function App() {
 
   const [count, setCount] = React.useState(0);
@@ -73,6 +81,7 @@ function App() {
   }
 
   return (
+    <Router>
     <ChakraProvider theme={theme}>
       <div id={"whole"}>
         <div id="heading">
@@ -107,15 +116,20 @@ function App() {
             </ModalContent>
           </Modal>
 
-        </div>
-        <div id={"body"} style={{ height:'50vh'}}>
 
         </div>
-        <div id={"footer"} style={{height: '70vh'}}>
+        <Routes>
+          <Route exact path="/" element={<Home />}  />
+          {/*<Route exact path="/abc" element={<Abcd/>}/>*/}
+          <Route path="*" element={<Navigate to="/" />} />
 
-        </div>
+        </Routes>
+        {/*<div id={"footer"} style={{height: '70vh'}}>*/}
+
+        {/*</div>*/}
       </div>
     </ChakraProvider>
+    </Router>
   );
 }
 
